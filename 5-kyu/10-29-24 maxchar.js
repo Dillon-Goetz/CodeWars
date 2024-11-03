@@ -8,7 +8,7 @@ function maxCharacter(str){
     maxChar = null
 
     //map for chars in str + freq
-    for (const chat of str){
+    for (const char of str){
         charMap[char] = charMap[char] + 1 || 1
     }
 
