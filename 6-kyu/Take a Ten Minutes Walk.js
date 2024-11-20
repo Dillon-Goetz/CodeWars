@@ -4,15 +4,18 @@
 
 //My solution: 
 function isValidWalk(walk) {
-const charMap = {}
-
-for(const direction of walk)
-  charMap[direction] = (charMap[direction] || 0) + 1;
-  
-return walk.length === 10 &&
-       charMap['n'] === charMap['s'] && 
-       charMap['e'] === charMap['w'];
+  if (walk.length !== 10) {
+    return false;
   }
+
+  const charMap = {};
+
+  for (const direction of walk) {
+    charMap[direction] = (charMap[direction] || 0) + 1;
+  }
+
+  return charMap['n'] === charMap['s'] && charMap['e'] === charMap['w'];
+}
 
 //Other solutions: 
 function isValidWalk(walk) {
