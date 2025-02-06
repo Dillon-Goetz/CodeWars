@@ -1,0 +1,5 @@
+return the sum of the array of values as if all were numbers. 
+
+function sumAllValues(x){
+return x.reduce( (a,c) => a + +c, 0)
+}
